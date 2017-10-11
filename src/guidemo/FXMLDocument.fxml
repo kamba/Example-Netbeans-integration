@@ -2,14 +2,17 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="guidemo.FXMLDocumentController">
    <children>
-      <VBox layoutX="14.0" layoutY="14.0" prefHeight="460.0" prefWidth="206.0" spacing="10.0">
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="200.0" spacing="10.0">
          <children>
             <Label text="CheckBox Objects">
                <font>
@@ -20,7 +23,45 @@
             <CheckBox fx:id="pinneappleCheckBox" mnemonicParsing="false" text="Pineapple" />
             <CheckBox fx:id="baconCheckBox" mnemonicParsing="false" text="Bacon" />
             <Button mnemonicParsing="false" onAction="#pizzaOrdderButtonOrderPushed" text="Order Pizza" />
-            <Label fx:id="pizzaOrderLabel" alignment="TOP_LEFT" prefHeight="94.0" prefWidth="196.0" text="Label" />
+            <Label fx:id="pizzaOrderLabel" alignment="TOP_LEFT" prefHeight="94.0" prefWidth="196.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="200.0" layoutY="14.0" prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="ChoiceBox Obect">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceBox" onDragDetected="#choiceBoxWasUpdated" prefWidth="150.0" />
+            <Button mnemonicParsing="false" onAction="#choiceBoxWasUpdated" text="Favourite Fruit" />
+            <Label fx:id="choiceBoxLabel" alignment="TOP_LEFT" prefHeight="211.0" prefWidth="244.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="400.0" layoutY="14.0" prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="ComboBox Obect">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBox" onAction="#comboBoxWasUpdated" prefWidth="150.0" />
+            <Label fx:id="comboBoxLabel" />
+            <Label fx:id="comboBoxLabel" alignment="TOP_LEFT" prefHeight="187.0" prefWidth="198.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="645.0" layoutY="14.0" prefHeight="300.0" prefWidth="200.0" spacing="25.0">
+         <children>
+            <Label text="RadioButton Object">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radiobtn1" mnemonicParsing="false" onAction="#RadioButtonChosen" text="Burger" />
+            <RadioButton fx:id="radiobtn2" mnemonicParsing="false" onAction="#RadioButtonChosen" text="Pizza" />
+            <RadioButton fx:id="radiobtn3" mnemonicParsing="false" onAction="#RadioButtonChosen" text="Ugali" />
+            <RadioButton fx:id="radiobtn4" mnemonicParsing="false" onAction="#RadioButtonChosen" text="Madondo" />
+            <Label fx:id="radioButtonLabel" alignment="TOP_LEFT" prefHeight="163.0" prefWidth="201.0" />
          </children>
       </VBox>
    </children>
